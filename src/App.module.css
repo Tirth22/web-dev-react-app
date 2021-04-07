@@ -1,0 +1,14 @@
+body {
+  background: black;
+  text-align: center;
+}
+
+* {
+  color: white;
+}
+
+a,
+a:hover {
+  color: white;
+  text-decoration: none;
+}

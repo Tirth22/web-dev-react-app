@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.module.css'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import MusicPlayer from './components/MusicPlayer/MusicPlayer'
+import Home from './components/Home/Home'
+import Search from './components/Search/Search.js'
+import HOC from './components/HOC/HOC'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Router>
+      <HOC>
+        <Switch>
+          <Route path="/play/:songId">
+            <MusicPlayer />
+          </Route>
+          <Route path="/" exact>
+            <Home />
+          </Route>
+          <Route path="/search" exact>
+            <Search />
+          </Route>
+        </Switch>
+      </HOC>
+    </Router>
+  )
 }
 
-export default App;
+export default App
