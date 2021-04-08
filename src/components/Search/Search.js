@@ -2,7 +2,6 @@ import { useState } from 'react'
 import useSongsList from '../../helpers/useSongsList'
 import FeatherIcon from 'feather-icons-react'
 import { Link } from 'react-router-dom'
-import SmoothImage from 'react-smooth-image'
 
 const Search = () => {
   const [query, setQuery] = useState('')
@@ -14,32 +13,32 @@ const Search = () => {
 
   return (
     <>
-      <div className="p-5 pb-0 d-flex fixed top-0 end-0 justify-content-end">
+      <div className="pb-0 d-flex fixed-top end-0 justify-content-end align-items-center">
         <input
           placeholder="Search by song name"
           value={query}
-          className="rounded-pill bg-secondary py-2 px-4 flex-1"
+          className="rounded-pill bg-secondary py-2 px-5 border-0 flex-grow-1"
+          style={{ marginLeft: '56px' }}
           onChange={handleChange}
         />
-        <FeatherIcon icon="search" />
+        <div className="p-3">
+          <FeatherIcon icon="search" />
+        </div>
       </div>
-      <div className="container pt-5">
+      <div className="container mx-auto pt-5">
         {songs.length !== 0 ? (
           <>
-            <h6 className="text-muted mb-4">Most Relevant Results</h6>
+            <h6 className="text-muted m-4">Most Relevant Results</h6>
             <div className="d-flex w-100 justify-content-center">
               {songs.slice(0, 4).map((song) => {
                 return (
-                  <div key={song._id}>
-                    <Link to={`/play/${song._id}`} className="d-flex">
-                      <div style={{ width: '20vw' }} className="p-3">
-                        <SmoothImage
-                          src={song.img_url}
-                          className="w-100 h-100"
-                        />
-                      </div>
-                    </Link>
-                  </div>
+                  <Link
+                    to={`/play/${song._id}`}
+                    key={song._id}
+                    className="col-3 px-1"
+                  >
+                    <img src={song.img_url} className="w-100" />
+                  </Link>
                 )
               })}
             </div>

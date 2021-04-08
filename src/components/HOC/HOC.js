@@ -12,9 +12,9 @@ const HOC = ({ children }) => {
       <div
         style={{
           position: 'fixed',
-          padding: '1rem',
           zIndex: '100',
         }}
+        className="p-3"
       >
         <FeatherIcon icon="chevron-left" onClick={handleClick} />
       </div>

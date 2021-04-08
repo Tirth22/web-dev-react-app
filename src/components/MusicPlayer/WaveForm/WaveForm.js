@@ -48,7 +48,7 @@ const WaveForm = ({ song_url }) => {
     <>
       <div
         className="container-fluid px-0 w-75 my-4 position-relative"
-        style={{ height: 75 }}
+        style={{ height: 75, maxWidth: '500px' }}
       >
         <div ref={waveformRef} style={{ maxWidth: 500 }}></div>
         <div
@@ -59,7 +59,7 @@ const WaveForm = ({ song_url }) => {
           }}
         ></div>
       </div>
-      <div onClick={handlePlayPause}>
+      <div onClick={handlePlayPause} className="pb-5">
         <FeatherIcon icon={playing ? 'pause' : 'play'} fill="white" size={36} />
       </div>
     </>

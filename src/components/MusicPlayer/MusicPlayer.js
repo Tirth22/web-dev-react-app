@@ -3,7 +3,6 @@ import { useState, useEffect } from 'react'
 import axios from '../../helpers/axiosForMusic'
 import WaveForm from './WaveForm/WaveForm'
 import * as Vibrant from 'node-vibrant'
-import SmoothImage from 'react-smooth-image'
 
 const MusicPlayer = () => {
   const { songId } = useParams()
@@ -40,12 +39,13 @@ const MusicPlayer = () => {
 
   return (
     <div style={{ backgroundColor: color, minHeight: '100vh' }}>
-      <div className="row justify-content-center mx-0">
-        <SmoothImage
+      <div className="row justify-content-center align-items-start mx-0 pt-0 pt-md-5">
+        <img
           src={song.img_url}
-          containerStyles={{
+          style={{
+            maxHeight: '450px',
+            maxWidth: '450px',
             width: '100vw',
-            height: '100vw',
           }}
         />
       </div>
