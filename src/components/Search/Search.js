@@ -36,7 +36,7 @@ const Search = () => {
                     key={song._id}
                     className="col-3 px-1"
                   >
-                    <img src={song.img_url} className="w-100" />
+                    <img src={song.img_url} className="w-100" alt={song.name} />
                   </Link>
                 )
               })}

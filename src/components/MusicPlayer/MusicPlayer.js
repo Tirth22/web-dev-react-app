@@ -42,6 +42,7 @@ const MusicPlayer = () => {
       <div className="row justify-content-center align-items-start mx-0 pt-0 pt-md-5">
         <img
           src={song.img_url}
+          alt={song.name}
           style={{
             maxHeight: '450px',
             maxWidth: '450px',

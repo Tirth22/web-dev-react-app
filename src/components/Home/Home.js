@@ -20,7 +20,7 @@ const Home = () => {
                 className="col-5 col-md-4 col-lg-3 my-4"
                 key={song._id}
               >
-                <img src={song.img_url} className="w-100" />
+                <img src={song.img_url} className="w-100" alt={song.name} />
                 <h6 className="mt-2 mb-0">{song.name}</h6>
                 <small className="text-muted">{song.artist}</small>
               </Link>
