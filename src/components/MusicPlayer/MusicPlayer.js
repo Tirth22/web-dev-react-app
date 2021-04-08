@@ -39,7 +39,7 @@ const MusicPlayer = () => {
   }, [songId])
 
   return (
-    <div style={{ backgroundColor: color }}>
+    <div style={{ backgroundColor: color, minHeight: '100vh' }}>
       <div className="row justify-content-center mx-0">
         <SmoothImage
           src={song.img_url}
@@ -49,7 +49,7 @@ const MusicPlayer = () => {
           }}
         />
       </div>
-      <h1 className="pt-2 font-weight-bold">{song.name}</h1>
+      <h1 className="pt-5 font-weight-bold">{song.name}</h1>
       <small>{song.artist}</small>
       <WaveForm song_url={song.song_url} />
     </div>
