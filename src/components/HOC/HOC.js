@@ -12,7 +12,7 @@ const HOC = ({ children }) => {
       <div
         style={{
           position: 'fixed',
-          zIndex: '100',
+          zIndex: '10000',
         }}
         className="p-3"
       >

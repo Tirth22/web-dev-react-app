@@ -15,7 +15,6 @@ const Search = () => {
     <>
       <div className="pb-0 d-flex fixed-top end-0 justify-content-end align-items-center">
         <input
-          placeholder="Search by song name"
           value={query}
           className="rounded-pill bg-secondary py-2 px-5 border-0 flex-grow-1"
           style={{ marginLeft: '56px' }}

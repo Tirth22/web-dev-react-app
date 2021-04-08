@@ -7,7 +7,7 @@ const Home = () => {
 
   return (
     <div>
-      <Link to="/search" className="p-5 d-flex justify-content-end ">
+      <Link to="/search" className="p-3 d-flex justify-content-end ">
         <FeatherIcon icon="search" />
       </Link>
       <div className="container mx-auto mt-5">
@@ -20,7 +20,7 @@ const Home = () => {
                 className="col-5 col-md-4 col-lg-3 my-4"
                 key={song._id}
               >
-                <img src={song.img_url} />
+                <img src={song.img_url} className="w-100" />
                 <h6 className="mt-2 mb-0">{song.name}</h6>
                 <small className="text-muted">{song.artist}</small>
               </Link>
